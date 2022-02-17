@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John MovieBar</title>
+
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HAMBERGER MENU -->
+    <div class="hamburger-menu">
+      <input type="checkbox">
+      <div class="hamburger-lines">
+        <span class="icon line1"></span>
+        <span class="icon line2"></span>
+        <span class="icon line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li onclick="popularMovies()">Popular</li>
+        <li onclick="nowplayingMovies()">Now Playing</li>
+        <li onclick="upcomingMovies()">Upcoming</li>
+        <li onclick="topratedMovies()">Top Rated</li>
+      </ul>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="logo">
+        <p>John. <span>MovieBar</span></p>
+      </div>
+      <!-- menu item -->
+      <div class="menu-btn">
+        <p class="popular" id="popular" onclick="popularMovies()">Popular</p>
+      </div>
+      <div class="menu-btn">
+        <p class="now-playing" id="now-playing" onclick="nowplayingMovies()">Now Playing</p>
+      </div>
+      <div class="menu-btn">
+        <p class="upcoming" id="upcoming" onclick="upcomingMovies()">Upcoming</p>
+      </div>
+      <div class="menu-btn">
+        <p class="top-rated" id="top-rated" onclick="topratedMovies()">Top Rated</p>
+      </div>
+    </nav>
+
+    <!-- Search Banner -->
+    <div class="scban">
+      <div class="banner-text">
+        <p>Welcome.</p>
+        <p>Millions of Movies, Web Series and Shows to Explore. Find Your One.</p>
+      </div>
+      <div class="scsec">
+        <input type="text" class="scbar" id="scbar" placeholder="Search for Movies, Web Series or TV Shows . . ." onkeyup="debounce(searchMovies,0)">
+        <button id="scbtn" class="scbtn" onclick="debounce(searchMovies,0)">Search</button>
+       
+        <!-- Search List Container -->
+        <div class="search-list" id="search-list">
+          <!-- Search List Here -->
+          <!-- <div class="search-list-item"> -->
+              <!-- <div class="search-item-thumbnail">
+                  <img src="91zDgUhTW6L._SY445_.jpg" alt="">
+              </div>
+              <div class="search-item-info">
+                  <h3>The Amazing Spider Man</h3>
+                  <p>2015</p>
+              </div> -->
+          <!-- </div>  -->
+          <!-- End Search List Here -->
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Search Banner -->
+
+  <!-- Search List Container -->
+
+  <!-- End of Search List Container -->
+
+  <!-- Start of Search result Containe  -->
+  <div class="container">
+    <!-- result grid -->
+    <div class="result-grid" id="result-grid">
+      <!-- <div class="movieBox">
+        <img src="91zDgUhTW6L._SY445_.jpg" alt="" class="poster">
+        <div class="movie-info">
+          <h3>Movie Name<span class="rate">9.8</span></h3>
+          
+        </div>
+        <div class="overview">
+          <h3>Overview:</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eos debitis impedit perferendis cumque illo dolores iusto maxime autem necessitatibus excepturi aspernatur, incidunt dicta reiciendis? Nemo libero vero atque. Tempore!</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- Start of Search result Containe  -->
+
+</body>
+</html>
+<script src="home.js"></script>
+<!-- <script src="/My_Movie_App/test.js"></script> -->
